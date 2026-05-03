@@ -13,7 +13,7 @@ if (discordCard) {
         discordCard.textContent = original;
       }, 1800);
     } catch (error) {
-      alert('複製失敗，請手動複製。');
+      alert('複製代碼失敗。');
     }
   });
 }
@@ -28,7 +28,7 @@ if (cs2CodeButton) {
         cs2CodeButton.textContent = original;
       }, 1800);
     } catch (error) {
-      alert('複製代碼失敗，請手動複製。');
+      alert('複製代碼失敗。');
     }
   });
 }
