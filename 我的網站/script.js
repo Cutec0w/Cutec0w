@@ -10,7 +10,7 @@ if (discordCard) {
         discordCard.textContent = `Discord：牛牛`;
       }, 1800);
     } catch (error) {
-      alert('複製Discord名稱失敗，請手動複製。');
+      alert('複製名稱失敗。');
     }
   });
 }
