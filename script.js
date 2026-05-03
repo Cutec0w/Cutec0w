@@ -1,16 +1,34 @@
 const discordCard = document.getElementById('discordCard');
+const cs2CodeButton = document.getElementById('cs2CodeButton');
 const discordName = '.cutecow';
+const cs2Code = 'S8UQD-VWUE';
 
 if (discordCard) {
   discordCard.addEventListener('click', async () => {
     try {
       await navigator.clipboard.writeText(discordName);
-      discordCard.textContent = `Discord：牛牛（已複製使用者名稱）`;
+      const original = discordCard.textContent;
+      discordCard.textContent = 'Discord：牛牛（已複製）';
       setTimeout(() => {
-        discordCard.textContent = `Discord：牛牛`;
+        discordCard.textContent = original;
       }, 1800);
     } catch (error) {
-      alert('複製名稱失敗。');
+      alert('複製失敗，請手動複製。');
+    }
+  });
+}
+
+if (cs2CodeButton) {
+  cs2CodeButton.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText(cs2Code);
+      const original = cs2CodeButton.textContent;
+      cs2CodeButton.textContent = 'CS2 代碼已複製！';
+      setTimeout(() => {
+        cs2CodeButton.textContent = original;
+      }, 1800);
+    } catch (error) {
+      alert('複製代碼失敗，請手動複製。');
     }
   });
 }
