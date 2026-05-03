@@ -8,7 +8,7 @@ if (discordCard) {
     try {
       await navigator.clipboard.writeText(discordName);
       const original = discordCard.textContent;
-      discordCard.textContent = 'Discord：代碼已複製！';
+      discordCard.textContent = 'Discord 代碼已複製！';
       setTimeout(() => {
         discordCard.textContent = original;
       }, 1800);
