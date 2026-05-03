@@ -23,7 +23,7 @@ if (cs2CodeButton) {
     try {
       await navigator.clipboard.writeText(cs2Code);
       const original = cs2CodeButton.textContent;
-      cs2CodeButton.textContent = '代碼已複製！';
+      cs2CodeButton.textContent = 'CS2 代碼已複製！';
       setTimeout(() => {
         cs2CodeButton.textContent = original;
       }, 1800);
