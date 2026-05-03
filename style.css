@@ -110,6 +110,7 @@ header h1 {
   color: var(--accent);
 }
 
+/* --- 主容器 --- */
 .hero {
   background: radial-gradient(circle at top left, rgba(110,231,183,0.2), transparent 35%),
               linear-gradient(135deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
@@ -231,6 +232,27 @@ header h1 {
   font-size: 0.85rem;
   color: var(--muted);
   margin-top: 10px;
+}
+
+.copy-card::after {
+  content: "點擊複製";
+}
+
+.copy-button {
+  padding: 10px 16px;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  color: var(--text);
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.copy-button:hover {
+  background: rgba(110,231,183,0.12);
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
 .card p,
@@ -370,7 +392,7 @@ header h1 {
 }
 
 .btn {
-  flex: 1;
+  flex: 1; 
   min-width: 100px;
   padding: 12px;
   border-radius: 12px;
@@ -404,7 +426,6 @@ header h1 {
   color: #fff;
 }
 
-/* --- Footer --- */
 .copyright-footer {
   padding: 30px;
   text-align: center;
@@ -417,7 +438,6 @@ header h1 {
 @media (max-width: 768px) {
   body {
     padding-top: 140px; 
-  }
 
   header {
     flex-direction: column;
@@ -440,7 +460,7 @@ header h1 {
   }
 
   .grid {
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
@@ -449,11 +469,11 @@ header h1 {
   }
 
   .controls {
-    flex-direction: column; 
+    flex-direction: column;
   }
 
   .btn, #espIp {
-    width: 100%;
+    width: 100%; 
   }
 }
 
