@@ -24,6 +24,7 @@ body {
   padding-top: 100px; 
 }
 
+/* --- Header --- */
 header {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -331,6 +332,57 @@ header h1 {
   }
 }
 
+/* 關於我 */
+.about-me-box {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: 16px;
+}
+
+.about-me-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 0;
+  object-fit: cover;
+  border: 3px solid #000;
+  flex: 0 0 150px; /* 固定寬高，不會隨字型或容器改變 */
+}
+
+.about-me-speech {
+  background: rgba(255,255,255,0.03);
+  padding: 14px;
+  border-radius: 12px;
+  color: var(--text);
+}
+
+.about-me-speech p {
+  margin: 0;
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+@media (max-width: 768px) {
+  .about-me-box {
+    flex-direction: column;
+    text-align: center;
+  }
+  /* 保持頭像固定大小，避免被字型或佈局縮放 */
+}
+
+.about-me-speech h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.about-me-speech h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .wrap {
   width: 95%;
   max-width: 1200px;
@@ -384,15 +436,16 @@ header h1 {
   margin-left: 5px;
 }
 
+/* --- 控制 --- */
 .controls {
   display: flex;
   gap: 12px;
   margin-top: 15px;
-  flex-wrap: wrap;
+  flex-wrap: wrap; /* 按鈕在手機上可以換行 */
 }
 
 .btn {
-  flex: 1; 
+  flex: 1; /* 讓按鈕平分寬度 */
   min-width: 100px;
   padding: 12px;
   border-radius: 12px;
@@ -426,6 +479,7 @@ header h1 {
   color: #fff;
 }
 
+/* --- Footer --- */
 .copyright-footer {
   padding: 30px;
   text-align: center;
@@ -438,6 +492,7 @@ header h1 {
 @media (max-width: 768px) {
   body {
     padding-top: 140px; 
+  }
 
   header {
     flex-direction: column;
@@ -456,7 +511,7 @@ header h1 {
   }
 
   .val {
-    font-size: 2.8rem; 
+    font-size: 2.8rem;
   }
 
   .grid {
@@ -473,8 +528,7 @@ header h1 {
   }
 
   .btn, #espIp {
-    width: 100%; 
-  }
+    width: 100%;
 }
 
 @media (max-width: 380px) {
